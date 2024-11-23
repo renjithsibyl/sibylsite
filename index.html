@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Solution Hub</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #fff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem;
+    }
+    header a:hover {
+      color: #555;
+    }
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .banner {
+      padding: 5rem 1rem;
+    }
+    .contact-form input, .contact-form textarea {
+      display: block;
+      width: 80%;
+      margin: 1rem auto;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      font-family: 'Courier New', monospace;
+    }
+    .contact-form button {
+      padding: 0.5rem 2rem;
+      font-family: 'Courier New', monospace;
+      border: 1px solid #000;
+      background: #fff;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#offer">what we offer</a>
+    <a href="#about">who we are</a>
+    <a href="#contact">want to contact us?</a>
+  </header>
+  <section class="banner">
+    <p>welcome to your software solution hub.</p>
+    <p>connecting the right minds to build software for</p>
+    <p>banking, utilities, telecom, and more.</p>
+    <p>microsoft, java, open source.</p>
+    <p>azure, aws, google cloud.</p>
+    <p>we've got you covered.</p>
+  </section>
+  <section id="offer">
+    <h2>what we offer</h2>
+    <p>we specialize in providing the perfect software solutions...</p>
+  </section>
+  <section id="about">
+    <h2>who we are</h2>
+    <p>we are a team of passionate technologists...</p>
+  </section>
+  <section id="contact">
+    <h2>want to contact us?</h2>
+    <p>our office: [insert address here]</p>
+    <div class="contact-form">
+      <input type="text" placeholder="name" required>
+      <input type="email" placeholder="email" required>
+      <textarea rows="4" placeholder="message"></textarea>
+      <button type="submit">submit</button>
+    </div>
+  </section>
+</body>
+</html>
