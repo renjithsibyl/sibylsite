@@ -1,44 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        function scrollToOffer() {
-            document.querySelector('#offer').scrollIntoView({ behavior: 'smooth' });
-          }
-          
-    </script>
-    <script>
-        const links = document.querySelectorAll('header a');
-        links.forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-          });
-        });
-      </script>
-      
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software Solution Hub</title>
   <style>
-    h1, h2, h3 {
-  font-family: 'Arial', sans-serif;
-}
-p, ul, li, input, textarea, button {
-  font-family: 'Courier New', monospace;
-}
-button {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
-button:hover {
-  background: #444;
-}
-
     body {
       font-family: 'Courier New', monospace;
       background-color: #fff;
@@ -61,31 +27,50 @@ button:hover {
       text-decoration: none;
       color: #000;
       font-size: 1rem;
+      text-transform: lowercase;
     }
     header a:hover {
-  color: #444;
-  text-decoration: underline;
-}
-
-
+      color: #555;
+    }
     section {
       padding: 2rem;
-      text-align: center;
+      text-align: left;
+      max-width: 800px;
+      margin: auto;
     }
     .banner {
-      padding: 5rem 1rem;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+    h2 {
+      font-family: 'Arial', sans-serif;
+      text-transform: lowercase;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-family: 'Courier New', monospace;
+      text-transform: lowercase;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
     .contact-form input, .contact-form textarea {
       display: block;
-      width: 80%;
-      margin: 1rem auto;
+      width: 100%;
+      margin: 1rem 0;
       padding: 0.5rem;
       border: 1px solid #ccc;
       font-family: 'Courier New', monospace;
+      font-size: 1rem;
     }
     .contact-form button {
       padding: 0.5rem 2rem;
       font-family: 'Courier New', monospace;
+      text-transform: lowercase;
       border: 1px solid #000;
       background: #fff;
       cursor: pointer;
@@ -93,6 +78,12 @@ button:hover {
     .contact-form button:hover {
       background: #000;
       color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #ccc;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -102,53 +93,54 @@ button:hover {
     <a href="#about">who we are</a>
     <a href="#contact">want to contact us?</a>
   </header>
+  
   <section class="banner">
-    <p>
-        welcome to your software solution hub. <br>
-        connecting the right minds to build software for <br>
-        banking, utilities, telecom, and more.
-      </p>
-      <p>
-        <button onclick="scrollToOffer()">explore our services</button>
-      </p>
-      
+    <img src="./images/banner1.jpg" alt="Digital illustration of computers, AI, and humanoid">
+    <p>welcome to your software solution hub.</p>
+    <p>connecting the right minds to build software for banking, utilities, telecom, and more.</p>
+    <p>microsoft, java, open source.</p>
+    <p>azure, aws, google cloud.</p>
+    <p>we've got you covered.</p>
   </section>
+
   <section id="offer">
     <h2>what we offer</h2>
-    <ul>
-        <li><strong>Custom Software Development:</strong> Tailored solutions built for your business needs.</li>
-        <li><strong>Cloud Migration:</strong> Seamlessly transition to Azure, AWS, or Google Cloud.</li>
-        <li><strong>Maintenance and Support:</strong> Ensure the stability and reliability of your systems.</li>
-        <li><strong>Team Augmentation:</strong> Get the right talent for your project needs.</li>
-      </ul>
-      
+    <p>
+      we specialize in providing tailored software solutions to meet your unique business needs.
+    </p>
+    <p>
+      our expertise spans across multiple domains, including banking, utilities, telecom, and retail. 
+      whether you're looking for custom software development, cloud migration, or team augmentation, 
+      we've got you covered.
+    </p>
+    <p>
+      we work with leading technologies like microsoft stack, java, and open source, and have extensive 
+      experience in cloud platforms such as azure, aws, and google cloud.
+    </p>
   </section>
+
   <section id="about">
     <h2>who we are</h2>
-    <p>we are a team of passionate technologists...</p><p>
-        at the core of our work is a commitment to deliver software solutions that empower businesses.
-      </p>
-      <p>
-        with over a decade of experience in the tech industry, we bring together a global team of
-        developers, architects, and consultants. our goal is to simplify complex software needs
-        and enable businesses to thrive in a competitive market.
-      </p>
-      
+    <p>
+      we are a team of passionate technologists dedicated to bridging the gap between your business vision 
+      and the right software solutions. with years of experience across diverse industries, our mission is to 
+      deliver innovative, reliable, and scalable solutions to empower your business.
+    </p>
   </section>
+
   <section id="contact">
     <h2>want to contact us?</h2>
     <p>our office: [insert address here]</p>
-    <div class="contact-form">
-        <input type="text" placeholder="name" required pattern="[a-zA-Z\s]+" title="Only letters allowed">
-        <input type="email" placeholder="email" required>
-        <textarea rows="4" placeholder="message" required></textarea>
-        
+    <form class="contact-form">
+      <input type="text" placeholder="name" required>
+      <input type="email" placeholder="email" required>
+      <textarea rows="4" placeholder="message" required></textarea>
       <button type="submit">submit</button>
-    </div>
+    </form>
   </section>
-  <footer>
-    <p>© 2024 SibylCues Software Solution Hub. all rights reserved.</p>
-  </footer>
   
+  <footer>
+    <p>© 2024 software solution hub. all rights reserved.</p>
+  </footer>
 </body>
 </html>
